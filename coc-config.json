@@ -1,0 +1,19 @@
+{
+  "coc.preferences.diagnostic.enable": true,
+  "coc.preferences.diagnostic.hoverTarget": "float",
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "args": ["-remote", "127.0.0.1:7050", "-logfile=auto", "-debug=:0", "-rpc.trace"],
+      "disableWorkspaceFolders": true,
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      },
+      "env": {
+        "GOFLAGS": "-tags=consulent -tags=ent"
+      }
+    }
+  }
+}
